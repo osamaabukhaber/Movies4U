@@ -244,7 +244,7 @@ export default function Header() {
           {/* <NavLink to="/" className="text-2xl font-extrabold tracking-wide text-white hover:text-red-600"> */}
           <NavLink to="/" className="text-2xl font-extrabold tracking-wide text-white hover:text-red-600">
           {/* <NavLink to="/" className="text-amber-600 text-2xl font-extrabold tracking-wide  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-600 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"> */}
-            Movies Land2
+            Movies Land
           </NavLink>
           <div className="hidden md:flex space-x-6 font-bold ">
             <NavLinks links={navLinks} />
