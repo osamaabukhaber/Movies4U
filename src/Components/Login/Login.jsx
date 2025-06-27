@@ -40,7 +40,7 @@ export default function Login() {
           </div>
           <button
             type="submit"
-            className="w-full py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300"
+            className="w-full py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 cursor-pointer"
           >
             Login
           </button>

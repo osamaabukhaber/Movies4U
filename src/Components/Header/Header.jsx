@@ -61,7 +61,7 @@
 //             </NavLink>
 //           </div>
 
-          
+
 
 //           {/* Hamburger (Mobile Only) */}
 //           <div className="md:hidden">
@@ -172,7 +172,7 @@
 //             </NavLink>
 //           </div>
 
-          
+
 
 //           {/* Hamburger (Mobile Only) */}
 //           <div className="md:hidden">
@@ -225,6 +225,8 @@ import NavLinks from "./NavLinks";
 import SearchBar from "./SearchBar";
 import MobileMenu from "./MobileMenu";
 import "./header.css";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdClose } from "react-icons/md";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -239,10 +241,12 @@ export default function Header() {
     <nav className="bg-gradient-to-r from-cyan-950 to-slate-800 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* <NavLink to="/" className="text-2xl font-extrabold tracking-wide text-white hover:text-red-600"> */}
           <NavLink to="/" className="text-2xl font-extrabold tracking-wide text-white hover:text-red-600">
+          {/* <NavLink to="/" className="text-amber-600 text-2xl font-extrabold tracking-wide  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-600 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"> */}
             Movies Land
           </NavLink>
-          <div className="hidden md:flex space-x-6 font-bold">
+          <div className="hidden md:flex space-x-6 font-bold ">
             <NavLinks links={navLinks} />
           </div>
           <div className="flex items-center space-x-2 ">
@@ -262,11 +266,9 @@ export default function Header() {
             >
               {/* Hamburger Icon */}
               <span className="sr-only">Open main menu</span>
-              <svg className="text-white w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
+              
+              {menuOpen?<MdClose className="text-2xl"/> :  <RxHamburgerMenu className="text-2xl" />           }
+
             </button>
           </div>
         </div>

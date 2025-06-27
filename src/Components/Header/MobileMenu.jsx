@@ -9,7 +9,7 @@ export default function MobileMenu({ links, onClose }) {
             <NavLink
               to={link.to}
               onClick={onClose}
-              className="block text-white no-underline hover:text-yellow-300 transition text-lg py-2 px-3 rounded-md"
+              className="block text-white no-underline hover:text-red-600 font-bold transition text-lg py-2 px-3 rounded-md"
             >
               {link.label}
             </NavLink>
