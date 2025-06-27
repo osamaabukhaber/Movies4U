@@ -491,6 +491,7 @@ import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../axiosInstance/instance";
 import MovieCard from "./MovieCard";
 import { useLocation } from "react-router-dom";
+import MovieCardLoader from "./MovieCardLoader";
 
 export default function Movie() {
   const [movies, setMovies] = useState([]);
@@ -502,11 +503,11 @@ export default function Movie() {
 
 
   const location = useLocation();
-useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  setSearch(params.get("search") || "");
-  setPage(1);
-}, [location.search]);
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    setSearch(params.get("search") || "");
+    setPage(1);
+  }, [location.search]);
 
 
 
@@ -587,9 +588,15 @@ useEffect(() => {
           />
         </div>
 
-        {/* Conditional Rendering based on loading and movies array */}
+
         {loading ? (
-          <div className="text-center text-white text-2xl">Loading...</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            {Array(10)
+              .fill(0)
+              .map((_, i) => (
+                <MovieCardLoader key={i} />
+              ))}
+          </div>
         ) : movies.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {movies.map((movie) => (
@@ -605,6 +612,7 @@ useEffect(() => {
             No movies found. Try a different search.
           </div>
         )}
+
 
         {/* Pagination Controls */}
         <div className="flex justify-center items-center mt-10 gap-4">
