@@ -1,12 +1,45 @@
-# React + Vite
+# 🎬 Movies4U
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Movies4U** is a modern, responsive movie browsing web application built with ReactJS. It integrates with the [TMDB API](https://www.themoviedb.org/documentation/api) to fetch and display trending, popular, and top-rated movies. Users can view detailed information about each movie, including poster, rating, overview, and release date.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [movies4u-sable.vercel.app](https://movies4u-sable.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 Browse trending, top-rated, and upcoming movies
+- 📄 View detailed movie info: title, rating, overview, and release date
+- ⚡ Fast and responsive UI with Tailwind CSS
+- 🌙 Clean design and dark mode friendly
+- 🔄 Dynamic routing using React Router
+- 🔌 Integration with external REST API (TMDB)
+
+---
+
+## 🛠 Tech Stack
+
+- **ReactJS**
+- **React Router DOM**
+- **Axios** – For API calls
+- **Tailwind CSS** – For styling
+- **TMDB API** – Movie data source
+- **Vercel** – For deployment
+
+---
+
+## 📸 Screenshots
+
+*(You can add screenshots here by uploading images to the `assets` folder or via direct URLs)*
+
+---
+
+## 📦 Getting Started
+
+To run the project locally:
+
+```bash
+git clone https://github.com/osamaabukhaber/Movies4U.git
+cd Movies4U
+npm install
+npm start
